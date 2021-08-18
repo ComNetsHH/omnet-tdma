@@ -1,0 +1,62 @@
+\hypertarget{class_tdma_scheduler}{}\doxysection{Tdma\+Scheduler Class Reference}
+\label{class_tdma_scheduler}\index{TdmaScheduler@{TdmaScheduler}}
+Inheritance diagram for Tdma\+Scheduler\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tdma_scheduler}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tdma_scheduler_a668e81b7bc5cad75266bf88ed13b8532}\label{class_tdma_scheduler_a668e81b7bc5cad75266bf88ed13b8532}} 
+int {\bfseries register\+Client} (\mbox{\hyperlink{class_tdma_mac}{Tdma\+Mac}} $\ast$mac, int buffer\+Status)
+\item 
+\mbox{\Hypertarget{class_tdma_scheduler_ac6744bb3dfc4160a110fcfb3993da6de}\label{class_tdma_scheduler_ac6744bb3dfc4160a110fcfb3993da6de}} 
+void {\bfseries report\+Buffer\+Status} (int node\+Id, int buffer\+Status)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tdma_scheduler_af374405a20272e15c744066cbbdfca86}\label{class_tdma_scheduler_af374405a20272e15c744066cbbdfca86}} 
+void {\bfseries initialize} (int stage) override
+\item 
+\mbox{\Hypertarget{class_tdma_scheduler_aaadbfc8da081dbf2b2870b39416161b4}\label{class_tdma_scheduler_aaadbfc8da081dbf2b2870b39416161b4}} 
+void {\bfseries create\+Schedule} ()
+\item 
+\mbox{\Hypertarget{class_tdma_scheduler_ab3854b3ac01af182df18154b5eabba19}\label{class_tdma_scheduler_ab3854b3ac01af182df18154b5eabba19}} 
+virtual void {\bfseries handle\+Message} (c\+Message $\ast$message) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tdma_scheduler_ae5c5aa4283b1d5709939b32656d60694}\label{class_tdma_scheduler_ae5c5aa4283b1d5709939b32656d60694}} 
+int {\bfseries num\+Nodes} = 0
+\item 
+\mbox{\Hypertarget{class_tdma_scheduler_a0da1e1fa38561e77ff15fb055c8a309f}\label{class_tdma_scheduler_a0da1e1fa38561e77ff15fb055c8a309f}} 
+map$<$ int, \mbox{\hyperlink{class_tdma_mac}{Tdma\+Mac}} $\ast$ $>$ {\bfseries clients}
+\item 
+\mbox{\Hypertarget{class_tdma_scheduler_a02baff59b891197b79d09bb726a92ba3}\label{class_tdma_scheduler_a02baff59b891197b79d09bb726a92ba3}} 
+map$<$ int, int $>$ {\bfseries buffer\+Status}
+\item 
+\mbox{\Hypertarget{class_tdma_scheduler_ae33a5459cb9e76514f466391b22747f7}\label{class_tdma_scheduler_ae33a5459cb9e76514f466391b22747f7}} 
+vector$<$ int $>$ {\bfseries schedule}
+\item 
+\mbox{\Hypertarget{class_tdma_scheduler_abdb2c7c5b7b36fe99d7002e0f9e66a02}\label{class_tdma_scheduler_abdb2c7c5b7b36fe99d7002e0f9e66a02}} 
+double {\bfseries frame\+Duration}
+\item 
+\mbox{\Hypertarget{class_tdma_scheduler_aaf3e96bb2769575e58e7a77e2d8ba265}\label{class_tdma_scheduler_aaf3e96bb2769575e58e7a77e2d8ba265}} 
+double {\bfseries slot\+Duration}
+\item 
+\mbox{\Hypertarget{class_tdma_scheduler_abd4291af6500370e7fc5546824d02c2b}\label{class_tdma_scheduler_abd4291af6500370e7fc5546824d02c2b}} 
+int {\bfseries frame\+Length}
+\item 
+\mbox{\Hypertarget{class_tdma_scheduler_a6927eee0015640956d90447a275b1bda}\label{class_tdma_scheduler_a6927eee0015640956d90447a275b1bda}} 
+c\+Message $\ast$ {\bfseries scheduling\+Self\+Message} = nullptr
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/scheduler/Tdma\+Scheduler.\+h\item 
+src/scheduler/Tdma\+Scheduler.\+cc\end{DoxyCompactItemize}

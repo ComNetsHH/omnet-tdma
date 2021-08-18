@@ -1,0 +1,77 @@
+\hypertarget{class_tdma_mac}{}\doxysection{Tdma\+Mac Class Reference}
+\label{class_tdma_mac}\index{TdmaMac@{TdmaMac}}
+Inheritance diagram for Tdma\+Mac\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tdma_mac}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tdma_mac_a2d8fa1a933a8bea8f6b56757ecef624a}\label{class_tdma_mac_a2d8fa1a933a8bea8f6b56757ecef624a}} 
+void {\bfseries set\+Schedule} (vector$<$ int $>$ new\+Schedule)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tdma_mac_a16ad83205779b2c7978cb701539d0d96}\label{class_tdma_mac_a16ad83205779b2c7978cb701539d0d96}} 
+void {\bfseries initialize} (int stage) override
+\item 
+\mbox{\Hypertarget{class_tdma_mac_a376fbf37f354cbae135313a2af93ed11}\label{class_tdma_mac_a376fbf37f354cbae135313a2af93ed11}} 
+virtual void {\bfseries handle\+Upper\+Packet} (Packet $\ast$packet) override
+\item 
+\mbox{\Hypertarget{class_tdma_mac_a61b36f526928bf3b68d6472f8cb4abad}\label{class_tdma_mac_a61b36f526928bf3b68d6472f8cb4abad}} 
+virtual void {\bfseries handle\+Self\+Message} (c\+Message $\ast$message) override
+\item 
+\mbox{\Hypertarget{class_tdma_mac_aedad7079ac7333d0a5b6fe98f33c6ff6}\label{class_tdma_mac_aedad7079ac7333d0a5b6fe98f33c6ff6}} 
+virtual void {\bfseries acked} (Packet $\ast$frame) override
+\item 
+\mbox{\Hypertarget{class_tdma_mac_a00f9214fdf139c71d4bab9e654f0067a}\label{class_tdma_mac_a00f9214fdf139c71d4bab9e654f0067a}} 
+void {\bfseries receive\+Signal} (c\+Component $\ast$source, simsignal\+\_\+t signal\+ID, intval\+\_\+t value, c\+Object $\ast$details) override
+\item 
+\mbox{\Hypertarget{class_tdma_mac_a245fb5857ff63ec6b43958cf385cb1a9}\label{class_tdma_mac_a245fb5857ff63ec6b43958cf385cb1a9}} 
+simtime\+\_\+t {\bfseries get\+Next\+Transmission\+Slot} ()
+\item 
+\mbox{\Hypertarget{class_tdma_mac_a9abcb6ff25771df5968e1de2214d1ba7}\label{class_tdma_mac_a9abcb6ff25771df5968e1de2214d1ba7}} 
+simtime\+\_\+t {\bfseries get\+First\+Slot\+In\+Next\+Frame} ()
+\item 
+\mbox{\Hypertarget{class_tdma_mac_a0c9989007aa92a5bcac9b816d1f3bd72}\label{class_tdma_mac_a0c9989007aa92a5bcac9b816d1f3bd72}} 
+bool {\bfseries has\+Grant} ()
+\item 
+\mbox{\Hypertarget{class_tdma_mac_a92dc7dfd4bb5ac3f3aace61551559c4c}\label{class_tdma_mac_a92dc7dfd4bb5ac3f3aace61551559c4c}} 
+bool {\bfseries has\+Future\+Grant} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tdma_mac_a17b932e0e84c7b083e45b184b5375f04}\label{class_tdma_mac_a17b932e0e84c7b083e45b184b5375f04}} 
+\mbox{\hyperlink{class_tdma_scheduler}{Tdma\+Scheduler}} $\ast$ {\bfseries scheduler} = nullptr
+\item 
+\mbox{\Hypertarget{class_tdma_mac_a89168f5a05259c393380b3119006b5eb}\label{class_tdma_mac_a89168f5a05259c393380b3119006b5eb}} 
+vector$<$ int $>$ {\bfseries schedule}
+\item 
+\mbox{\Hypertarget{class_tdma_mac_ae8ddee894b35e3aa802678947bae60c6}\label{class_tdma_mac_ae8ddee894b35e3aa802678947bae60c6}} 
+int {\bfseries node\+Id}
+\item 
+\mbox{\Hypertarget{class_tdma_mac_a96b640c97ade6839bc0de56f440eaca7}\label{class_tdma_mac_a96b640c97ade6839bc0de56f440eaca7}} 
+double {\bfseries slot\+Duration}
+\item 
+\mbox{\Hypertarget{class_tdma_mac_aad6b6f6d7cd9ffdc564089d0dd9ced98}\label{class_tdma_mac_aad6b6f6d7cd9ffdc564089d0dd9ced98}} 
+int {\bfseries frame\+Length}
+\item 
+\mbox{\Hypertarget{class_tdma_mac_a07f8a3030f7a5bd118d02cb478cba6fd}\label{class_tdma_mac_a07f8a3030f7a5bd118d02cb478cba6fd}} 
+int {\bfseries current\+Transmission\+Attemps} = 0
+\item 
+\mbox{\Hypertarget{class_tdma_mac_a3de8d15f3adc777e189ff8e83f7b50e9}\label{class_tdma_mac_a3de8d15f3adc777e189ff8e83f7b50e9}} 
+int {\bfseries num\+Retries}
+\item 
+\mbox{\Hypertarget{class_tdma_mac_a6b970c17686d7bb5abba65ba65506465}\label{class_tdma_mac_a6b970c17686d7bb5abba65ba65506465}} 
+c\+Message $\ast$ {\bfseries transmission\+Self\+Message} = nullptr
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/mac/Tdma\+Mac.\+h\item 
+src/mac/Tdma\+Mac.\+cc\end{DoxyCompactItemize}

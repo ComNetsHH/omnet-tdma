@@ -1,0 +1,136 @@
+\hypertarget{class_rlc_core}{}\doxysection{Rlc\+Core Class Reference}
+\label{class_rlc_core}\index{RlcCore@{RlcCore}}
+
+
+\mbox{\hyperlink{class_rlc_core}{Rlc\+Core}} is a pure C++ implementation of the fragmentation/reassembly logic.  
+
+
+
+
+{\ttfamily \#include $<$Rlc\+Core.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rlc_core_af80dce9c135e008c7945f7df80dabb40}{Rlc\+Core}} ()
+\item 
+\mbox{\hyperlink{class_rlc_core_a583a1eb22d4e0a112998d195d733cb75}{$\sim$\+Rlc\+Core}} ()
+\item 
+void \mbox{\hyperlink{class_rlc_core_a4574f7e2ec51323c53bf2f32fb94c986}{add\+Frame}} (\mbox{\hyperlink{struct_abstract_frame}{Abstract\+Frame}} frame)
+\item 
+void \mbox{\hyperlink{class_rlc_core_a08d196d5209401ed68cd99d7ec2875f0}{add\+Packet}} (\mbox{\hyperlink{struct_abstract_packet}{Abstract\+Packet}} packet)
+\item 
+bool \mbox{\hyperlink{class_rlc_core_a02472c960e8a4bd52c3ae638f055af0e}{has\+Frame}} ()
+\item 
+\mbox{\hyperlink{struct_abstract_frame}{Abstract\+Frame}} \mbox{\hyperlink{class_rlc_core_a7c9ad4e279f99d546d621442acea6064}{get\+Frame}} (int size)
+\item 
+vector$<$ \mbox{\hyperlink{struct_abstract_packet}{Abstract\+Packet}} $>$ \mbox{\hyperlink{class_rlc_core_a71b029f8a8e64f46dc27815ca1e7f27a}{get\+Complete\+Packets}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{struct_abstract_frame}{Abstract\+Frame}} $>$ \mbox{\hyperlink{class_rlc_core_a48c71d3a03e5e2231b38b3b2722cfc43}{received\+Frames}}
+\item 
+vector$<$ \mbox{\hyperlink{struct_abstract_packet}{Abstract\+Packet}} $>$ \mbox{\hyperlink{class_rlc_core_a97af5f125410bb76b884e130b7602262}{packet\+Queue}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_rlc_core}{Rlc\+Core}} is a pure C++ implementation of the fragmentation/reassembly logic. 
+
+More to come... \begin{DoxyAuthor}{Author}
+Konrad Fuger, T\+U\+HH Com\+Nets 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+August 2020 
+\end{DoxyDate}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_rlc_core_af80dce9c135e008c7945f7df80dabb40}\label{class_rlc_core_af80dce9c135e008c7945f7df80dabb40}} 
+\index{RlcCore@{RlcCore}!RlcCore@{RlcCore}}
+\index{RlcCore@{RlcCore}!RlcCore@{RlcCore}}
+\doxysubsubsection{\texorpdfstring{RlcCore()}{RlcCore()}}
+{\footnotesize\ttfamily Rlc\+Core\+::\+Rlc\+Core (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Standard Constructor \mbox{\Hypertarget{class_rlc_core_a583a1eb22d4e0a112998d195d733cb75}\label{class_rlc_core_a583a1eb22d4e0a112998d195d733cb75}} 
+\index{RlcCore@{RlcCore}!````~RlcCore@{$\sim$RlcCore}}
+\index{````~RlcCore@{$\sim$RlcCore}!RlcCore@{RlcCore}}
+\doxysubsubsection{\texorpdfstring{$\sim$RlcCore()}{~RlcCore()}}
+{\footnotesize\ttfamily Rlc\+Core\+::$\sim$\+Rlc\+Core (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Standard Destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_rlc_core_a4574f7e2ec51323c53bf2f32fb94c986}\label{class_rlc_core_a4574f7e2ec51323c53bf2f32fb94c986}} 
+\index{RlcCore@{RlcCore}!addFrame@{addFrame}}
+\index{addFrame@{addFrame}!RlcCore@{RlcCore}}
+\doxysubsubsection{\texorpdfstring{addFrame()}{addFrame()}}
+{\footnotesize\ttfamily void Rlc\+Core\+::add\+Frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_abstract_frame}{Abstract\+Frame}}}]{frame }\end{DoxyParamCaption})}
+
+Adds a received frame to the 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{struct_abstract_frame}{Abstract\+Frame}}} & frame\+: The frame to be stored \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rlc_core_a08d196d5209401ed68cd99d7ec2875f0}\label{class_rlc_core_a08d196d5209401ed68cd99d7ec2875f0}} 
+\index{RlcCore@{RlcCore}!addPacket@{addPacket}}
+\index{addPacket@{addPacket}!RlcCore@{RlcCore}}
+\doxysubsubsection{\texorpdfstring{addPacket()}{addPacket()}}
+{\footnotesize\ttfamily void Rlc\+Core\+::add\+Packet (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_abstract_packet}{Abstract\+Packet}}}]{packet }\end{DoxyParamCaption})}
+
+Adds a packet received from the network layer 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{struct_abstract_packet}{Abstract\+Packet}}} & packet\+: The packet received \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rlc_core_a71b029f8a8e64f46dc27815ca1e7f27a}\label{class_rlc_core_a71b029f8a8e64f46dc27815ca1e7f27a}} 
+\index{RlcCore@{RlcCore}!getCompletePackets@{getCompletePackets}}
+\index{getCompletePackets@{getCompletePackets}!RlcCore@{RlcCore}}
+\doxysubsubsection{\texorpdfstring{getCompletePackets()}{getCompletePackets()}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{struct_abstract_packet}{Abstract\+Packet}}$>$ Rlc\+Core\+::get\+Complete\+Packets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+returns all complete packets \begin{DoxyReturn}{Returns}
+A list of all successfully reassembled packets 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_rlc_core_a7c9ad4e279f99d546d621442acea6064}\label{class_rlc_core_a7c9ad4e279f99d546d621442acea6064}} 
+\index{RlcCore@{RlcCore}!getFrame@{getFrame}}
+\index{getFrame@{getFrame}!RlcCore@{RlcCore}}
+\doxysubsubsection{\texorpdfstring{getFrame()}{getFrame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_abstract_frame}{Abstract\+Frame}} Rlc\+Core\+::get\+Frame (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+returns a frame in the required size 
+\begin{DoxyParams}{Parameters}
+{\em int} & size\+: Size of the required frame. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_rlc_core_a02472c960e8a4bd52c3ae638f055af0e}\label{class_rlc_core_a02472c960e8a4bd52c3ae638f055af0e}} 
+\index{RlcCore@{RlcCore}!hasFrame@{hasFrame}}
+\index{hasFrame@{hasFrame}!RlcCore@{RlcCore}}
+\doxysubsubsection{\texorpdfstring{hasFrame()}{hasFrame()}}
+{\footnotesize\ttfamily bool Rlc\+Core\+::has\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+determines whether there is still a frame to send \begin{DoxyReturn}{Returns}
+decision whether there is a frame 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_rlc_core_a97af5f125410bb76b884e130b7602262}\label{class_rlc_core_a97af5f125410bb76b884e130b7602262}} 
+\index{RlcCore@{RlcCore}!packetQueue@{packetQueue}}
+\index{packetQueue@{packetQueue}!RlcCore@{RlcCore}}
+\doxysubsubsection{\texorpdfstring{packetQueue}{packetQueue}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{struct_abstract_packet}{Abstract\+Packet}}$>$ Rlc\+Core\+::packet\+Queue\hspace{0.3cm}{\ttfamily [protected]}}
+
+Vector to hold all received packets not transmitted yet \mbox{\Hypertarget{class_rlc_core_a48c71d3a03e5e2231b38b3b2722cfc43}\label{class_rlc_core_a48c71d3a03e5e2231b38b3b2722cfc43}} 
+\index{RlcCore@{RlcCore}!receivedFrames@{receivedFrames}}
+\index{receivedFrames@{receivedFrames}!RlcCore@{RlcCore}}
+\doxysubsubsection{\texorpdfstring{receivedFrames}{receivedFrames}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{struct_abstract_frame}{Abstract\+Frame}}$>$ Rlc\+Core\+::received\+Frames\hspace{0.3cm}{\ttfamily [protected]}}
+
+Vector to hold all received frames 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/rlc/Rlc\+Core.\+h\item 
+src/rlc/Rlc\+Core.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,65 @@
+\hypertarget{struct_abstract_frame}{}\doxysection{Abstract\+Frame Struct Reference}
+\label{struct_abstract_frame}\index{AbstractFrame@{AbstractFrame}}
+
+
+The \mbox{\hyperlink{struct_abstract_frame}{Abstract\+Frame}} is a data structure to decouple packet representation from the internal O\+M\+Ne\+T++/\+I\+N\+ET data structure.  
+
+
+
+
+{\ttfamily \#include $<$Rlc\+Core.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_abstract_frame_af78a59fc54428f144182b73b9c855b23}{size}}
+\item 
+int \mbox{\hyperlink{struct_abstract_frame_a4fbe76d19a8fec73edb66c419fe00bc1}{seq\+Num}}
+\item 
+bool \mbox{\hyperlink{struct_abstract_frame_ab2531ba81a888ccf3dc395e7514d7cb5}{is\+End}}
+\item 
+bool \mbox{\hyperlink{struct_abstract_frame_ae55e2d5c13ed5b95f0a22d67837d2a3c}{is\+Start}}
+\item 
+double \mbox{\hyperlink{struct_abstract_frame_a3a54307648ba317af6e6b9355085b3b8}{ts}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{struct_abstract_frame}{Abstract\+Frame}} is a data structure to decouple packet representation from the internal O\+M\+Ne\+T++/\+I\+N\+ET data structure. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_abstract_frame_ab2531ba81a888ccf3dc395e7514d7cb5}\label{struct_abstract_frame_ab2531ba81a888ccf3dc395e7514d7cb5}} 
+\index{AbstractFrame@{AbstractFrame}!isEnd@{isEnd}}
+\index{isEnd@{isEnd}!AbstractFrame@{AbstractFrame}}
+\doxysubsubsection{\texorpdfstring{isEnd}{isEnd}}
+{\footnotesize\ttfamily bool Abstract\+Frame\+::is\+End}
+
+indicates whether a packets ends with this frame \mbox{\Hypertarget{struct_abstract_frame_ae55e2d5c13ed5b95f0a22d67837d2a3c}\label{struct_abstract_frame_ae55e2d5c13ed5b95f0a22d67837d2a3c}} 
+\index{AbstractFrame@{AbstractFrame}!isStart@{isStart}}
+\index{isStart@{isStart}!AbstractFrame@{AbstractFrame}}
+\doxysubsubsection{\texorpdfstring{isStart}{isStart}}
+{\footnotesize\ttfamily bool Abstract\+Frame\+::is\+Start}
+
+indicates whether a new packet starts with this frame \mbox{\Hypertarget{struct_abstract_frame_a4fbe76d19a8fec73edb66c419fe00bc1}\label{struct_abstract_frame_a4fbe76d19a8fec73edb66c419fe00bc1}} 
+\index{AbstractFrame@{AbstractFrame}!seqNum@{seqNum}}
+\index{seqNum@{seqNum}!AbstractFrame@{AbstractFrame}}
+\doxysubsubsection{\texorpdfstring{seqNum}{seqNum}}
+{\footnotesize\ttfamily int Abstract\+Frame\+::seq\+Num}
+
+sequence number \mbox{\Hypertarget{struct_abstract_frame_af78a59fc54428f144182b73b9c855b23}\label{struct_abstract_frame_af78a59fc54428f144182b73b9c855b23}} 
+\index{AbstractFrame@{AbstractFrame}!size@{size}}
+\index{size@{size}!AbstractFrame@{AbstractFrame}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int Abstract\+Frame\+::size}
+
+size of the frame \mbox{\Hypertarget{struct_abstract_frame_a3a54307648ba317af6e6b9355085b3b8}\label{struct_abstract_frame_a3a54307648ba317af6e6b9355085b3b8}} 
+\index{AbstractFrame@{AbstractFrame}!ts@{ts}}
+\index{ts@{ts}!AbstractFrame@{AbstractFrame}}
+\doxysubsubsection{\texorpdfstring{ts}{ts}}
+{\footnotesize\ttfamily double Abstract\+Frame\+::ts}
+
+timestamp to be used to discard very old frames which could not be reassembled 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rlc/Rlc\+Core.\+h\end{DoxyCompactItemize}

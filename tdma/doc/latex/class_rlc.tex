@@ -1,0 +1,141 @@
+\hypertarget{class_rlc}{}\doxysection{Rlc Class Reference}
+\label{class_rlc}\index{Rlc@{Rlc}}
+
+
+\mbox{\hyperlink{class_rlc}{Rlc}} is the O\+M\+Ne\+T++ wrapper implemenatation of the R\+LC layer. It borrows its functionality from the \mbox{\hyperlink{class_rlc_core}{Rlc\+Core}} class.  
+
+
+
+
+{\ttfamily \#include $<$Rlc.\+h$>$}
+
+Inheritance diagram for Rlc\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_rlc}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_rlc_a2f76a047d5e07cbdb270bbc1199aaf4c}{get\+Buffer\+Status}} ()
+\item 
+void \mbox{\hyperlink{class_rlc_a21f36a3671a3e31dbcebbbbebf2dc564}{request\+Frame}} (int size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rlc_a6e0b81bf10a9f6033cff1a4be34da5fe}{$\sim$\+Rlc}} ()
+\item 
+\mbox{\Hypertarget{class_rlc_a91218c9b05ede60a9149b44b8a5dbffd}\label{class_rlc_a91218c9b05ede60a9149b44b8a5dbffd}} 
+virtual void {\bfseries initialize} (int stage) override
+\item 
+\mbox{\Hypertarget{class_rlc_af1f5fc41062e1f51fbf272e4e8dd6799}\label{class_rlc_af1f5fc41062e1f51fbf272e4e8dd6799}} 
+virtual void {\bfseries send\+Up} (c\+Message $\ast$message)
+\item 
+\mbox{\Hypertarget{class_rlc_a126c06d450c2d452abacdbf43dbe1af4}\label{class_rlc_a126c06d450c2d452abacdbf43dbe1af4}} 
+virtual void {\bfseries send\+Down} (c\+Message $\ast$message)
+\item 
+\mbox{\Hypertarget{class_rlc_ac3e6a1209f63b8635dad98ef311fcb15}\label{class_rlc_ac3e6a1209f63b8635dad98ef311fcb15}} 
+virtual void {\bfseries handle\+Message\+When\+Down} (c\+Message $\ast$msg) override
+\item 
+\mbox{\Hypertarget{class_rlc_a5951499034b2a90e5928efd9f8f1110e}\label{class_rlc_a5951499034b2a90e5928efd9f8f1110e}} 
+virtual void {\bfseries handle\+Start\+Operation} (Lifecycle\+Operation $\ast$operation) override
+\item 
+\mbox{\Hypertarget{class_rlc_a1709fa1bc541d9507869cbeb21c2ae33}\label{class_rlc_a1709fa1bc541d9507869cbeb21c2ae33}} 
+virtual void {\bfseries handle\+Stop\+Operation} (Lifecycle\+Operation $\ast$operation) override
+\item 
+\mbox{\Hypertarget{class_rlc_a6d9c88a7b13b524f76d9add369c5d980}\label{class_rlc_a6d9c88a7b13b524f76d9add369c5d980}} 
+virtual void {\bfseries handle\+Crash\+Operation} (Lifecycle\+Operation $\ast$operation) override
+\item 
+\mbox{\Hypertarget{class_rlc_a96a39d7ab784261cd66928084d53c744}\label{class_rlc_a96a39d7ab784261cd66928084d53c744}} 
+virtual bool {\bfseries is\+Initialize\+Stage} (int stage) override
+\item 
+\mbox{\Hypertarget{class_rlc_ab271dfb959b0d4e017593f389c0d8a6e}\label{class_rlc_ab271dfb959b0d4e017593f389c0d8a6e}} 
+virtual bool {\bfseries is\+Module\+Start\+Stage} (int stage) override
+\item 
+\mbox{\Hypertarget{class_rlc_a9834335bf51b486bfaee092acbba128e}\label{class_rlc_a9834335bf51b486bfaee092acbba128e}} 
+virtual bool {\bfseries is\+Module\+Stop\+Stage} (int stage) override
+\item 
+\mbox{\Hypertarget{class_rlc_a249ebd43c8950b5e8d7623d12f21870f}\label{class_rlc_a249ebd43c8950b5e8d7623d12f21870f}} 
+virtual bool {\bfseries is\+Upper\+Message} (c\+Message $\ast$message) override
+\item 
+\mbox{\Hypertarget{class_rlc_ab68b5766197682ea4de7eb88b2000795}\label{class_rlc_ab68b5766197682ea4de7eb88b2000795}} 
+virtual bool {\bfseries is\+Lower\+Message} (c\+Message $\ast$message) override
+\item 
+\mbox{\Hypertarget{class_rlc_a21580927bcf9da07228618071e6e5700}\label{class_rlc_a21580927bcf9da07228618071e6e5700}} 
+virtual void {\bfseries handle\+Upper\+Packet} (Packet $\ast$packet) override
+\item 
+\mbox{\Hypertarget{class_rlc_a820ead57d528df9c649cd27e5ebd9eaa}\label{class_rlc_a820ead57d528df9c649cd27e5ebd9eaa}} 
+virtual void {\bfseries handle\+Lower\+Packet} (Packet $\ast$packet) override
+\item 
+\mbox{\Hypertarget{class_rlc_adb8b749dbdee94b26decc29b62abfab9}\label{class_rlc_adb8b749dbdee94b26decc29b62abfab9}} 
+virtual void {\bfseries handle\+Self\+Message} (c\+Message $\ast$message) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rlc_core}{Rlc\+Core}} $\ast$ \mbox{\hyperlink{class_rlc_a45f7ba40a1c0585f2177dcf58cbaeba9}{rlc\+Core}} = nullptr
+\item 
+\mbox{\Hypertarget{class_rlc_a7802a06d72a11f6d4aa1cbc68e41f222}\label{class_rlc_a7802a06d72a11f6d4aa1cbc68e41f222}} 
+int {\bfseries upper\+Layer\+In\+Gate\+Id} = -\/1
+\item 
+\mbox{\Hypertarget{class_rlc_a0366361ddcb8e8ca2f579cbbbf8f2830}\label{class_rlc_a0366361ddcb8e8ca2f579cbbbf8f2830}} 
+int {\bfseries upper\+Layer\+Out\+Gate\+Id} = -\/1
+\item 
+\mbox{\Hypertarget{class_rlc_a4a5d2ade020bb464fa6d26b85a8d8ec7}\label{class_rlc_a4a5d2ade020bb464fa6d26b85a8d8ec7}} 
+int {\bfseries lower\+Layer\+In\+Gate\+Id} = -\/1
+\item 
+\mbox{\Hypertarget{class_rlc_ab11a30f3d6482d1abe625e41b34f785e}\label{class_rlc_ab11a30f3d6482d1abe625e41b34f785e}} 
+int {\bfseries lower\+Layer\+Out\+Gate\+Id} = -\/1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_rlc}{Rlc}} is the O\+M\+Ne\+T++ wrapper implemenatation of the R\+LC layer. It borrows its functionality from the \mbox{\hyperlink{class_rlc_core}{Rlc\+Core}} class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_rlc_a6e0b81bf10a9f6033cff1a4be34da5fe}\label{class_rlc_a6e0b81bf10a9f6033cff1a4be34da5fe}} 
+\index{Rlc@{Rlc}!````~Rlc@{$\sim$Rlc}}
+\index{````~Rlc@{$\sim$Rlc}!Rlc@{Rlc}}
+\doxysubsubsection{\texorpdfstring{$\sim$Rlc()}{~Rlc()}}
+{\footnotesize\ttfamily Rlc\+::$\sim$\+Rlc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Standard destructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_rlc_a2f76a047d5e07cbdb270bbc1199aaf4c}\label{class_rlc_a2f76a047d5e07cbdb270bbc1199aaf4c}} 
+\index{Rlc@{Rlc}!getBufferStatus@{getBufferStatus}}
+\index{getBufferStatus@{getBufferStatus}!Rlc@{Rlc}}
+\doxysubsubsection{\texorpdfstring{getBufferStatus()}{getBufferStatus()}}
+{\footnotesize\ttfamily int Rlc\+::get\+Buffer\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This function returns the current buffer status in bytes \begin{DoxyReturn}{Returns}
+buffer fill level in bytes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_rlc_a21f36a3671a3e31dbcebbbbebf2dc564}\label{class_rlc_a21f36a3671a3e31dbcebbbbebf2dc564}} 
+\index{Rlc@{Rlc}!requestFrame@{requestFrame}}
+\index{requestFrame@{requestFrame}!Rlc@{Rlc}}
+\doxysubsubsection{\texorpdfstring{requestFrame()}{requestFrame()}}
+{\footnotesize\ttfamily void Rlc\+::request\+Frame (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+Called from the M\+AC layer to instruct the R\+LC layer to send down a frame in the required size 
+\begin{DoxyParams}{Parameters}
+{\em size} & of the frame in bytes \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_rlc_a45f7ba40a1c0585f2177dcf58cbaeba9}\label{class_rlc_a45f7ba40a1c0585f2177dcf58cbaeba9}} 
+\index{Rlc@{Rlc}!rlcCore@{rlcCore}}
+\index{rlcCore@{rlcCore}!Rlc@{Rlc}}
+\doxysubsubsection{\texorpdfstring{rlcCore}{rlcCore}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_rlc_core}{Rlc\+Core}}$\ast$ Rlc\+::rlc\+Core = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+Reference to the \mbox{\hyperlink{class_rlc_core}{Rlc\+Core}} instance 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/rlc/Rlc.\+h\item 
+src/rlc/Rlc.\+cc\end{DoxyCompactItemize}
