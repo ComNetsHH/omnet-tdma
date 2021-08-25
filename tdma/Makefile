@@ -2,24 +2,8 @@
 # OMNeT++/OMNEST Makefile for tdma
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -KINET_PROJ=../inet -DINET_IMPORT -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I$$\(INET_PROJ\)/src -L$$\(INET_PROJ\)/src -lINET$$\(D\) -d src -X.
+#  opp_makemake --nolink -f --deep -O out -KINET_PROJ=../inet -DINET_IMPORT -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I$$\(INET_PROJ\)/src -L$$\(INET_PROJ\)/src -lINET$$\(D\) -d src -X.
 #
-
-# Name of target to be created (-o option)
-TARGET = tdma$(D)$(EXE_SUFFIX)
-TARGET_DIR = .
-
-# User interface (uncomment one) (-u option)
-USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(QTENV_LIBS) $(CMDENV_LIBS)
-#USERIF_LIBS = $(CMDENV_LIBS)
-#USERIF_LIBS = $(TKENV_LIBS)
-#USERIF_LIBS = $(QTENV_LIBS)
-
-# Additional object and library files to link with
-EXTRA_OBJS =
-
-# Additional libraries (-L, -l options)
-LIBS = $(LDFLAG_LIBPATH)$(INET_PROJ)/src  -lINET$(D)
 
 # Output directory
 PROJECT_OUTPUT_DIR = out
@@ -49,12 +33,6 @@ endif
 
 include $(CONFIGFILE)
 
-# Simulation kernel and user interface libraries
-OMNETPP_LIBS = $(OPPMAIN_LIB) $(USERIF_LIBS) $(KERNEL_LIBS) $(SYS_LIBS)
-ifneq ($(TOOLCHAIN_NAME),clangc2)
-LIBS += -Wl,-rpath,$(abspath $(INET_PROJ)/src)
-endif
-
 # we want to recompile everything if COPTS changes,
 # so we store COPTS into $COPTS_FILE and have object
 # files depend on it (except when "make depend" was called)
@@ -73,7 +51,6 @@ MSGC:=$(MSGC) --msg6
 #------------------------------------------------------------------------------
 
 # Main target
-all: $(TARGET_DIR)/$(TARGET)
 
 $(TARGET_DIR)/% :: $O/%
 	@mkdir -p $(TARGET_DIR)
@@ -82,10 +59,8 @@ ifeq ($(TOOLCHAIN_NAME),clangc2)
 	$(Q)-$(LN) $(<:%.dll=%.lib) $(@:%.dll=%.lib)
 endif
 
-$O/$(TARGET):  submakedirs $(wildcard $(EXTRA_OBJS)) Makefile $(CONFIGFILE)
-	@$(MKPATH) $O
-	@echo Creating executable: $@
-	$(Q)$(CXX) $(LDFLAGS) -o $O/$(TARGET)  $(EXTRA_OBJS) $(AS_NEEDED_OFF) $(WHOLE_ARCHIVE_ON) $(LIBS) $(WHOLE_ARCHIVE_OFF) $(OMNETPP_LIBS)
+all:  submakedirs Makefile $(CONFIGFILE)
+	@# Do nothing
 
 submakedirs:  src_dir
 
@@ -104,8 +79,6 @@ smheaders:
 clean:
 	$(qecho) Cleaning $(TARGET)
 	$(Q)-rm -rf $O
-	$(Q)-rm -f $(TARGET_DIR)/$(TARGET)
-	$(Q)-rm -f $(TARGET_DIR)/$(TARGET:%.dll=%.lib)
 	$(Q)-rm -f $(call opp_rwildcard, . , *_m.cc *_m.h *_sm.cc *_sm.h)
 	-$(Q)cd src && $(MAKE) clean
 
