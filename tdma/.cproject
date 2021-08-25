@@ -221,6 +221,20 @@
     	
     <storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
     	
-    <storageModule moduleId="refreshScope"/>
+    <storageModule moduleId="refreshScope" versionNumber="2">
+        		
+        <configuration configurationName="debug">
+            			
+            <resource resourceType="PROJECT" workspacePath="/tdma"/>
+            		
+        </configuration>
+        		
+        <configuration configurationName="release">
+            			
+            <resource resourceType="PROJECT" workspacePath="/tdma"/>
+            		
+        </configuration>
+        	
+    </storageModule>
     
 </cproject>

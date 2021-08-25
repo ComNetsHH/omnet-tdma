@@ -26,7 +26,7 @@ module TdmaScheduler
         int frameLength = default(10);
     	@class(TdmaScheduler);
     	
-        @signal[schedule](type=int);
+        @signal[schedule](type=long);
         @signal[utilization](type=double);
         @statistic[schedule](title="schedule"; record=vector,histogram; interpolationmode=none);
         @statistic[utilization](title="utilization"; record=vector,histogram,timeavg; interpolationmode=none);

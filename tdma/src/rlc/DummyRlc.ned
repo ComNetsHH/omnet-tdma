@@ -13,19 +13,16 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
+import inet.linklayer.base.MacProtocolBase;
+
 package tdma.rlc;
 
 //
 // TODO auto-generated type
 //
-simple DummyRlc like IRlc 
+simple DummyRlc extends MacProtocolBase like IRlc 
 {
 	parameters:
         @display("i=block/rxtx");
         @class(DummyRlc);
-    gates:
-        input upperLayerIn @labels(INetworkHeader/down);
-        output upperLayerOut @labels(INetworkHeader/up);
-        input lowerLayerIn @labels(ILinkLayerFrame/up);
-        output lowerLayerOut @labels(ILinkLayerFrame/down);
 }
