@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for tdma
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -KINET_PROJ=../../inet -DINET_IMPORT -I$$\(INET_PROJ\)/src -L$$\(INET_PROJ\)/src -lINET$$\(D\)
+#  opp_makemake -f --deep -KINET_PROJ=../../inet -DINET_IMPORT -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I$$\(INET_PROJ\)/src -L$$\(INET_PROJ\)/src -lINET$$\(D\)
 #
 
 # Name of target to be created (-o option)
@@ -16,7 +16,7 @@ USERIF_LIBS = $(ALL_ENV_LIBS) # that is, $(TKENV_LIBS) $(QTENV_LIBS) $(CMDENV_LI
 #USERIF_LIBS = $(QTENV_LIBS)
 
 # C++ include paths (with -I)
-INCLUDE_PATH = -I$(INET_PROJ)/src
+INCLUDE_PATH = -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I$(INET_PROJ)/src
 
 # Additional object and library files to link with
 EXTRA_OBJS =

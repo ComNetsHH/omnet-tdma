@@ -1,9 +1,9 @@
 [![DOI](https://zenodo.org/badge/397504015.svg)](https://zenodo.org/badge/latestdoi/397504015)
 
 # omnet-tdma
-OMNeT++ TDMA is a simple and abstract implementation of a TDMA MAC protocol. It divides time into time slots which are then groups into frames. For every frame a schedule is created which dictates nodes when to send. In this model, only the transmission of *data* is modelled. Control information is exchanged out of band yielding a strongly idealized model. 
+OMNeT++ TDMA is a simple and abstract implementation of a TDMA MAC protocol. It divides time into time slots which are then grouped into frames. For every frame a schedule is created which dictates nodes when to send. In this model, only the transmission of *data* is modelled. Control information is assumed to be exchanged out of band yielding a strongly idealized model. 
 
-To realize communication,a network interface card (`TdmaInterface`) is implemented to be used in any hosts, as well as an oracle scheduler module (`TdmaScheduler`) which must exist once per simulation. It's operation is depicted below:
+To realize communication, a network interface card (`TdmaInterface`) is implemented to be used in any hosts, as well as a single oracle scheduler module (`TdmaScheduler`). Its operation is depicted below:
 
 ![alt text](./tdma/doc/img/TDMA-Schema.png)
 

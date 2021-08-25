@@ -2,7 +2,7 @@
 # OMNeT++/OMNEST Makefile for tdma
 #
 # This file was generated with the command:
-#  opp_makemake -f --deep -O out -KINET_PROJ=../inet -DINET_IMPORT -I. -I$$\(INET_PROJ\)/src -L$$\(INET_PROJ\)/src -lINET$$\(D\) -d src -X.
+#  opp_makemake -f --deep -O out -KINET_PROJ=../inet -DINET_IMPORT -I. -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -I$$\(INET_PROJ\)/src -L$$\(INET_PROJ\)/src -lINET$$\(D\) -d src -X.
 #
 
 # Name of target to be created (-o option)

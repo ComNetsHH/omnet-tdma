@@ -2,3 +2,4 @@
 results/
 tdma/out/
 .cmdenv-log
+.DS_Store
