@@ -1,4 +1,4 @@
 [submodule "inet"]
 	path = inet
 	url = https://github.com/inet-framework/inet.git
-	branch = v4.3.x
+	branch = v4.2.x
