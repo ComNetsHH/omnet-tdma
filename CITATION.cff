@@ -5,7 +5,7 @@ authors:
   given-names: "Konrad"
   orcid: "https://orcid.org/0000-0002-8472-1483"
 title: "OMNET TDMA"
-version: 1.0.0
-doi: 10.5281/zenodo.5254507
+version: 1.0.1
+doi: 10.5281/zenodo.5272589
 date-released: 2021-08-26
 url: "https://github.com/ComNetsHH/omnet-tdma"
